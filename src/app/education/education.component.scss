@@ -1,0 +1,18 @@
+.education {
+    position: relative; /* Required for positioning the pseudo-element */
+}
+
+.education::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // background-image: url('../../assets/images/educationLogo.jpg');
+    // background-size: contain; /* Adjust as needed */
+    // background-position: center; /* Adjust as needed */
+    // background-repeat: no-repeat;
+    // opacity: 0.3; 
+    z-index: -1; 
+}

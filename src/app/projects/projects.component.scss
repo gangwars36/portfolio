@@ -1,0 +1,72 @@
+/* projects.component.css */
+
+.card {
+    cursor: pointer;
+    margin-bottom: 20px;
+    height: 200px; /* Set the desired fixed height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-body {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-title {
+    margin: 0;
+  }
+  
+  .modal {
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-header {
+    background: #007bff;
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .modal-title {
+    margin: 0;
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  .modal-footer {
+    background: #f0f0f0;
+    border-radius: 0 0 8px 8px;
+  }
+  
+  /* Optional: Close button style */
+  .btn-close {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Optional: Adjust modal size based on your content */
+  .modal-dialog {
+    max-width: 800px;
+  }
+  
+  /* Optional: Add transition for modal */
+  .modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+  }
+  
+  .modal.show .modal-dialog {
+    transform: translate(0);
+  }
+  

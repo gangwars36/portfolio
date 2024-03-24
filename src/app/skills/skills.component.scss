@@ -1,0 +1,32 @@
+.skill-card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  .hrTag {
+    // margin: 1rem 0;
+    color: inherit;
+    border: 0;
+    border-top: var(--bs-border-width) solid;
+    opacity: .25;
+    padding: 0px;
+    margin: 15px 0px;
+}
+  .skill-card h4 {
+    color: #007bff;
+  }
+  .tool-card {
+    background-color: #d4edda;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .tool-card h4 {
+    color: #28a745;
+  }
+  
+  

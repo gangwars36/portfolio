@@ -1,0 +1,9 @@
+.bgColor{
+    background: radial-gradient(#f9faff, #8f8f8f);
+}
+
+@media (max-width: 768px) {
+    .contentDiv{
+        max-height: 62vh;
+    }
+}

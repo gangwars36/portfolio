@@ -1,0 +1,21 @@
+<!-- projects.component.html -->
+<div class="row">
+    <div class="col-md-4" *ngFor="let project of projects">
+      <div class="card" (click)="openModal(template, project)">
+        <div class="card-body">
+          <h5 class="card-title">{{ project.name }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Project Details Modal -->
+  <ng-template #template>
+    <div class="modal-body">
+      <h5 class="modal-title">{{ selectedProject?.name }} Details</h5>
+      <ul>
+        <li *ngFor="let detail of selectedProject?.details">{{ detail }}</li>
+      </ul>
+    </div>
+  </ng-template>
+  

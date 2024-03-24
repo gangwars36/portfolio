@@ -1,0 +1,57 @@
+<!-- src/app/experience/experience.component.html -->
+<div class="carousel navHeight" data-bs-ride="false" id="experienceCarousel" style="height: 100%; width: 100%;">
+    <h2>Work Experience At</h2>
+    <div class="carousel-inner">
+        <div *ngFor="let experience of experiences; let i = index" class="carousel-item orgDiv"
+            [class.active]="i === currentSlide">
+            <div class="flip-card d-flex justify-content-center align-items-center mx-md-auto">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <!-- Replace 'path/to/company-logo.jpg' with the actual path to your company logo -->
+                        <img src="../../assets/images/company{{i+1}}.svg" alt="{{ experience.company }}"
+                            class="img-fluid w-100 h-100">
+                    </div>
+                    <div class="flip-card-back">
+                        <div>
+                            <p><strong>{{ experience.company }}</strong></p>
+                        <p>{{ experience.title }} | {{ experience.date }}</p>
+                        <ul>
+                            <li *ngFor="let point of experience.points">{{ point }}</li>
+                        </ul>
+                        <div class="usedSkills m-0 p-0 justify-content-center">
+                            <span class="skillName p-2 bg-secondary-subtle" *ngFor="let skill of experience.skills">
+                                {{ skill }}
+                            </span>
+                    </div>
+                        <h3 *ngIf="experience.projects.length>0" >Links:</h3>
+                        <ul>
+                            <li *ngFor="let project of experience.projects"><strong>
+                                <a href="{{ project.name }}" target="_blank">Gomedii</a>
+                            </strong>
+                            </li>
+                        </ul>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button class="carousel-control-prev bg-secondary icons mt-auto w-auto carousel_height" type="button"
+        data-bs-target="#experienceCarousel" data-bs-slide="prev" (click)="prevSlide()">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next bg-secondary icons mt-auto w-auto carousel_height" type="button"
+        data-bs-target="#experienceCarousel" data-bs-slide="next" (click)="nextSlide()">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+
+    <!-- Indicators at the bottom -->
+    <div class="carousel-indicators buttonStyling mt-auto">
+        <button *ngFor="let experience of experiences; let i = index" type="button" class="btn btn-outline-secondary"
+            [class.active]="i === currentSlide" (click)="currentSlide = i">
+            {{ i + 1 }}
+        </button>
+    </div>
+</div>

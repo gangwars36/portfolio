@@ -1,0 +1,72 @@
+.navHeight {
+  height: 100vh;
+}
+.active {
+  font-weight: bold;
+  color: #ff0000; /* Change to your desired highlight color */
+}
+
+.social-links {
+  display: flex;
+  gap: 5px !important; /* Keep the gap between social links */
+}
+.imgMargin{
+  margin: 10px;
+}
+.userName{
+  font-size:x-large;
+  font-weight: bolder;
+  margin: 0px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px;
+  color: #007bff; /* Icon color */
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+  background-color: #007bff; /* Hover background color */
+  color: #fff; /* Hover icon color */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .navHeight {
+    height: auto; /* Auto height for mobile devices */
+    padding-bottom: 20px; /* Add some padding at the bottom */
+  }
+
+  .social-links {
+    display: grid; /* Change to block for mobile devices */
+    text-align: center; /* Center-align social links */
+  }
+  .imgMargin{
+    margin: 0px;
+  }
+  .sideMargin{
+    margin: 0px;
+  }
+  .userName{
+    font-size:large;
+    font-weight: bolder;
+    margin: 0px;
+  }
+  .userRole{
+    margin: 0px;
+  }
+
+  .social-links a {
+    display: inline-block; /* Display social links as inline-block for mobile */
+    width: 35px; /* Increase the width of social links for better touchability */
+    height: 35px; /* Increase the height of social links */
+    font-size: 1.5rem; /* Increase the font size of icons for better visibility */
+  }
+}
