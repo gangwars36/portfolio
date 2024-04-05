@@ -48,6 +48,11 @@
     }
   }
   @media (max-width: 768px) {
+    .flip-card {
+      width: 92%;
+      height: 80vh; 
+      perspective: 1000px;
+    }
     .buttonStyling{
       margin: 0px;
     }
